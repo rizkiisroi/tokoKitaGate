@@ -1,0 +1,48 @@
+{
+    "name": "RfCompany",
+    "fields": [
+        {
+            "fieldName": "companyName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "registeredBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "registeredDate",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "approvedBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "approvedDate",
+            "fieldType": "Date"
+        },
+        {
+            "fieldName": "active",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "rfBranch",
+            "otherEntityRelationshipName": "rfCompany",
+            "relationshipName": "rfBranch",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191111072717",
+    "entityTableName": "rf_company",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

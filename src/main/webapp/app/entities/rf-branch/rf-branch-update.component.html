@@ -1,0 +1,71 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-rf-branch-heading">Create or edit a Rf Branch</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_branchName">Branch Name</label>
+                    <input type="text" class="form-control" name="branchName" id="field_branchName"
+                           formControlName="branchName"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_branchAddress">Branch Address</label>
+                    <input type="text" class="form-control" name="branchAddress" id="field_branchAddress"
+                           formControlName="branchAddress"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_branchCity">Branch City</label>
+                    <input type="text" class="form-control" name="branchCity" id="field_branchCity"
+                           formControlName="branchCity"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_branchPhone">Branch Phone</label>
+                    <input type="number" class="form-control" name="branchPhone" id="field_branchPhone"
+                           formControlName="branchPhone"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_registeredBy">Registered By</label>
+                    <input type="text" class="form-control" name="registeredBy" id="field_registeredBy"
+                           formControlName="registeredBy"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_registeredDate">Registered Date</label>
+                    <div class="d-flex">
+                        <input id="field_registeredDate" type="datetime-local" class="form-control" name="registeredDate" formControlName="registeredDate" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_approvedBy">Approved By</label>
+                    <input type="text" class="form-control" name="approvedBy" id="field_approvedBy"
+                           formControlName="approvedBy"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_approvedDate">Approved Date</label>
+                    <div class="d-flex">
+                        <input id="field_approvedDate" type="datetime-local" class="form-control" name="approvedDate" formControlName="approvedDate" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_active">Active</label>
+                    <input type="checkbox" class="form-control" name="active" id="field_active"
+                           formControlName="active"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

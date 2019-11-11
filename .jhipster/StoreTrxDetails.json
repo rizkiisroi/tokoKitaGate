@@ -1,0 +1,42 @@
+{
+    "name": "StoreTrxDetails",
+    "fields": [
+        {
+            "fieldName": "itemId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        },
+        {
+            "fieldName": "finalPrice",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "discount",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "storeTrx",
+            "otherEntityRelationshipName": "storeTrxDetails",
+            "relationshipName": "storeTrx",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191111072720",
+    "entityTableName": "store_trx_details",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

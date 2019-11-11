@@ -1,0 +1,49 @@
+{
+    "name": "RfItem",
+    "fields": [
+        {
+            "fieldName": "itemDesc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "qty",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "netPrice",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "sellPrice",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "tax",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "active",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "rfBranch",
+            "otherEntityRelationshipName": "rfItem",
+            "relationshipName": "rfBranch",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20191111072721",
+    "entityTableName": "rf_item",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

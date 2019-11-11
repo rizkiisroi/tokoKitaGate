@@ -14,6 +14,15 @@
     <property name="uuidType" value="varchar(36)" dbms="h2, mysql, mariadb"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191111072717_added_entity_RfCompany.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191111072718_added_entity_RfBranch.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191111072719_added_entity_StoreTrx.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191111072720_added_entity_StoreTrxDetails.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191111072721_added_entity_RfItem.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20191111072717_added_entity_constraints_RfCompany.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191111072719_added_entity_constraints_StoreTrx.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191111072720_added_entity_constraints_StoreTrxDetails.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191111072721_added_entity_constraints_RfItem.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

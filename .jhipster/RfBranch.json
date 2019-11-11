@@ -1,0 +1,73 @@
+{
+    "name": "RfBranch",
+    "fields": [
+        {
+            "fieldName": "branchName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "branchAddress",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "branchCity",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "branchPhone",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "registeredBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "registeredDate",
+            "fieldType": "Date"
+        },
+        {
+            "fieldName": "approvedBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "approvedDate",
+            "fieldType": "Date"
+        },
+        {
+            "fieldName": "active",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "rfCompany",
+            "otherEntityRelationshipName": "rfBranch",
+            "relationshipName": "rfCompany"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "rfItem",
+            "otherEntityRelationshipName": "rfBranch",
+            "relationshipName": "rfItem",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "storeTrx",
+            "otherEntityRelationshipName": "rfBranch",
+            "relationshipName": "storeTrx",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20191111072718",
+    "entityTableName": "rf_branch",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

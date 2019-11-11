@@ -1,0 +1,53 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="rfItem">
+            <h2><span>Rf Item</span> {{rfItem.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Item Desc</span></dt>
+                <dd>
+                    <span>{{rfItem.itemDesc}}</span>
+                </dd>
+                <dt><span>Qty</span></dt>
+                <dd>
+                    <span>{{rfItem.qty}}</span>
+                </dd>
+                <dt><span>Net Price</span></dt>
+                <dd>
+                    <span>{{rfItem.netPrice}}</span>
+                </dd>
+                <dt><span>Sell Price</span></dt>
+                <dd>
+                    <span>{{rfItem.sellPrice}}</span>
+                </dd>
+                <dt><span>Tax</span></dt>
+                <dd>
+                    <span>{{rfItem.tax}}</span>
+                </dd>
+                <dt><span>Active</span></dt>
+                <dd>
+                    <span>{{rfItem.active}}</span>
+                </dd>
+                <dt><span>Rf Branch</span></dt>
+                <dd>
+                    <div *ngIf="rfItem.rfBranch">
+                        <a [routerLink]="['/rf-branch', rfItem.rfBranch?.id, 'view']">{{rfItem.rfBranch?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/rf-item', rfItem.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

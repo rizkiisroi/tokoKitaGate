@@ -1,0 +1,47 @@
+{
+    "name": "StoreTrx",
+    "fields": [
+        {
+            "fieldName": "trxAmount",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "trxMethod",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "trxBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "trxDate",
+            "fieldType": "Date"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "rfBranch",
+            "otherEntityRelationshipName": "storeTrx",
+            "relationshipName": "rfBranch",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "storeTrxDetails",
+            "otherEntityRelationshipName": "storeTrx",
+            "relationshipName": "storeTrxDetails"
+        }
+    ],
+    "changelogDate": "20191111072719",
+    "entityTableName": "store_trx",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

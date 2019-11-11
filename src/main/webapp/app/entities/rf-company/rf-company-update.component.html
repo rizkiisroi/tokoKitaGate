@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-rf-company-heading">Create or edit a Rf Company</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_companyName">Company Name</label>
+                    <input type="text" class="form-control" name="companyName" id="field_companyName"
+                           formControlName="companyName"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_registeredBy">Registered By</label>
+                    <input type="text" class="form-control" name="registeredBy" id="field_registeredBy"
+                           formControlName="registeredBy"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_registeredDate">Registered Date</label>
+                    <input type="text" class="form-control" name="registeredDate" id="field_registeredDate"
+                           formControlName="registeredDate"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_approvedBy">Approved By</label>
+                    <input type="text" class="form-control" name="approvedBy" id="field_approvedBy"
+                           formControlName="approvedBy"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_approvedDate">Approved Date</label>
+                    <div class="d-flex">
+                        <input id="field_approvedDate" type="datetime-local" class="form-control" name="approvedDate" formControlName="approvedDate" placeholder="YYYY-MM-DD HH:mm"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_active">Active</label>
+                    <input type="checkbox" class="form-control" name="active" id="field_active"
+                           formControlName="active"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_rfBranch">Rf Branch</label>
+                    <select class="form-control" id="field_rfBranch" name="rfBranch" formControlName="rfBranch">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="rfBranchOption.id === editForm.get('rfBranch').value?.id ? editForm.get('rfBranch').value : rfBranchOption" *ngFor="let rfBranchOption of rfbranches; trackBy: trackRfBranchById">{{rfBranchOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
