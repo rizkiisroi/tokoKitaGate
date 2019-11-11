@@ -1,0 +1,46 @@
+{
+  "generator-jhipster": {
+    "applicationType": "gateway",
+    "gitCompany": "",
+    "baseName": "tokoKitaGate",
+    "packageName": "com.alam.tokokitagate",
+    "packageFolder": "com/alam/tokokitagate",
+    "serverPort": 8080,
+    "serviceDiscoveryType": "eureka",
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": false,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "enableSwaggerCodegen": "true",
+    "messageBroker": "kafka",
+    "buildTool": "maven",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [
+      "protractor"
+    ],
+    "enableTranslation": false,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "6.5.0",
+    "jwtSecretKey": "OGNhMmYyNzhhMmZiMTMyYzA2MTVhOTRiY2IyZGFlYTUxOTk5NjEzZWE0YWVhOWYyMjJmNTljNTA4NjZhN2RjNzdhOTNhMWJjMjk0MjQwMWM2NTg5OWU3ZjlkYmFmYTJjODdiN2MwY2U3MWUzNzQ4NTE2MTQxNWQ4M2EzZDQwNjA=",
+    "embeddableLaunchScript": false,
+    "clientTheme": "none",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "blueprints": []
+  },
+  "git-provider": "GitHub",
+  "git-company": "rizkiisroi",
+  "repository-name": "tokoKitaGate"
+}
