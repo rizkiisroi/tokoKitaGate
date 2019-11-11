@@ -1,0 +1,53 @@
+entity RfCompany {
+    companyName String,
+    registeredBy String,
+    registeredDate String,
+    approvedBy String,
+    approvedDate Date,
+    active Boolean
+}
+
+entity RfBranch {
+    branchName String,
+    branchAddress String,
+    branchCity String,
+    branchPhone Long,
+    registeredBy String,
+    registeredDate Date,
+    approvedBy String,
+    approvedDate Date,
+    active Boolean
+}
+entity StoreTrx{
+    trxAmount Double,
+    trxMethod String,
+    trxBy String,
+    trxDate Date
+}
+
+entity StoreTrxDetails{
+	itemId String required unique maxlength(100),
+    finalPrice Double,
+    discount Double
+}
+entity RfItem{
+    itemDesc String,
+    qty Integer,
+    netPrice Double,
+    sellPrice Double,
+    tax Double,
+    active Boolean
+}
+
+relationship OneToMany {
+    RfBranch to RfCompany,
+    StoreTrx to StoreTrxDetails
+}
+
+relationship OneToOne{
+    RfItem to RfBranch
+}
+
+relationship OneToOne{
+    StoreTrx to RfBranch
+}
